@@ -19,7 +19,7 @@ class ModuleTestingBlockTestCase extends DrupalWebTestCase {
   }
   
   public function testPage() {
-//    $this->drupalGet('');
+    $this->drupalGet('#');
     $this->assertText('Marty');
   }
 }
