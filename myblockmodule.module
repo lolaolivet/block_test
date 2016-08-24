@@ -1,0 +1,32 @@
+<?php
+
+
+/**
+ * Implements hook_block_info().
+ */
+function myblockmodule_block_info() {
+    $blocks['marty_countdown'] = array(
+        'info' => t('Marty Countdown'),
+    );
+
+    return $blocks;
+}
+
+/**
+ * Define what our block is going to look like.
+ * Implements hook_block_view().
+ */
+
+function myblockmodule_block_view($block_key){
+    $block = array();
+
+    if($block_key == 'marty_countdown'){ //We only want to define the content of OUR block
+        //This is the title of the block.
+        $block['subject'] = t('Marty McFly Countdown');
+
+        //Define the block content.
+        $block['content'] = t('Marty will arrive in ').(strtotime("2016-08-24")-time()).t(' seconds.');
+    }
+
+    return $block;
+}
