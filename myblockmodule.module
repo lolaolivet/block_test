@@ -7,6 +7,7 @@
 function myblockmodule_block_info() {
     $blocks['marty_countdown'] = array(
         'info' => t('Marty Countdown'),
+      'visibility' => t('localhost/drupal/'),
     );
 
     return $blocks;
