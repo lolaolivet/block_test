@@ -2,3 +2,5 @@ name = My Block Module
 description = Provides a custom block with dynamic content.
 package = MyModules
 core = 7.x
+
+files[] = tests/block_testing.test
