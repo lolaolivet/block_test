@@ -1,11 +1,11 @@
 <?php
 
-class ModuleTestingExampleTestCase extends DrupalWebTestCase {
+class ModuleTestingBlockTestCase extends DrupalWebTestCase {
   protected $normal_user;
   
   public static function getInfo() {
     return array(
-      'name' => 'Block Simple test',
+      'name' => 'Simple test',
       'description' => 'Test the block module',
       'group' => 'Module testing'
     );
@@ -19,7 +19,7 @@ class ModuleTestingExampleTestCase extends DrupalWebTestCase {
   }
   
   public function testPage() {
-    $this->drupalGet('');
+//    $this->drupalGet('');
     $this->assertText('Marty');
   }
 }
