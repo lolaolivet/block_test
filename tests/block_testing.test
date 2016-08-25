@@ -13,13 +13,13 @@ class ModuleTestingBlockTestCase extends DrupalWebTestCase {
   
   public function setUp() {
     parent::setUp(array('block_test'));
-    
+
     $this->normal_user = $this->drupalCreateUser();
     $this->drupalLogin($this->normal_user);
   }
   
   public function testPage() {
-    $this->drupalGet('#');
+    $this->drupalGet('marty_countdown');
     $this->assertText('Marty');
   }
 }
